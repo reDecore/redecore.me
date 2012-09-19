@@ -1,0 +1,4 @@
+<FilesMatch "\.(db|inc|tpl|tmpl|h|ihtml|sql|ini|configuration|config|class|bin|spd|theme|module|cfg|cpl|tmp|log|err)$">
+order allow,deny
+satisfy all
+</FilesMatch>

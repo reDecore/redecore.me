@@ -1,0 +1,115 @@
+.jcarousel-skin-pin-create-img-picker .jcarousel-container {
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-direction-rtl {
+	direction: rtl;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-container-horizontal {
+
+	margin-bottom: 20px;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-clip {
+    overflow: hidden;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-clip-horizontal {
+    
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-item {
+    width: 170px;;
+    max-height: 170px;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-item-horizontal {
+	
+
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 2px;
+    margin-right: 2px;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-horizontal {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    border: 1px solid #E1DFDF;
+    display: inline-block;
+    font-size: 13px;
+    padding: 3px 10px;
+    background: #DDD9D9;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-direction-rtl .jcarousel-next-horizontal {
+    left: 0px;
+    right: auto;
+    background: transparent url(/img/face/arr_media.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-horizontal:hover,
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-horizontal:focus {
+    background-position: -21px 0;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-horizontal:active {
+    background-position: -21px 0;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-disabled-horizontal:focus,
+.jcarousel-skin-pin-create-img-picker .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+	opacity: 0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-horizontal {
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+    border: 1px solid #E1DFDF;
+    display: inline-block;
+    font-size: 13px;
+    padding: 3px 10px;
+    background: #DDD9D9;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+    left: auto;
+    right: 0px;
+    background-image: url(/img/face/arr_media.png);
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-horizontal:hover, 
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-horizontal:focus {
+    background-position: 0 0;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-horizontal:active {
+    background-position: 0 0;
+}
+
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-disabled-horizontal:focus,
+.jcarousel-skin-pin-create-img-picker .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+	opacity: 0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+}
+.jcarousel-prev:hover,.jcarousel-next:hover {background: #eeeeee;text-decoration: none;}

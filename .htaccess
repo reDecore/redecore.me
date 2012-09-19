@@ -1,0 +1,76 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On 
+RewriteBase /
+RewriteRule ^login$ login.php
+RewriteRule ^logout$ logout.php
+RewriteRule ^log_out$ log_out.php
+RewriteRule ^welcome$ welcome.php
+RewriteRule ^getbutton$ getbutton.php
+RewriteRule ^lost$ lost.php
+RewriteRule ^invite$ invite.php
+RewriteRule ^invite_friends$ invite_friends.php
+RewriteRule ^add_pin$ add_pin.php
+RewriteRule ^signup$ signup.php
+RewriteRule ^invite_signup$ invite_signup.php
+RewriteRule ^confirmemail$ confirmemail.php
+RewriteRule ^createboard$ createboard.php
+RewriteRule ^createboard2$ createboard2.php
+RewriteRule ^pin_success$ pin_success.php
+RewriteRule ^pin_create_popup$ pin_create_popup.php
+RewriteRule ^report_popup$ report_popup.php
+RewriteRule ^gifts$ gifts.php
+RewriteRule ^videos$ videos.php
+RewriteRule ^more$ more.php
+RewriteRule ^more2$ more2.php
+RewriteRule ^more3$ more3.php
+RewriteRule ^more4$ more4.php
+RewriteRule ^more5$ more5.php
+RewriteRule ^more6$ more6.php
+RewriteRule ^more7$ more7.php
+RewriteRule ^more8$ more8.php
+RewriteRule ^more9$ more9.php
+RewriteRule ^more10$ more10.php
+RewriteRule ^more11$ more11.php
+RewriteRule ^more12$ more12.php
+RewriteRule ^popular$ popular.php
+RewriteRule ^all$ all.php
+RewriteRule ^search$ search.php
+RewriteRule ^add_popup$ add_popup.php
+RewriteRule ^pin_popup$ pin_popup.php
+RewriteRule ^upload_popup$ upload_popup.php
+RewriteRule ^board_popup$ board_popup.php
+RewriteRule ^about$ about.php
+RewriteRule ^pinit$ pinit.php
+RewriteRule ^rules$ rules.php
+RewriteRule ^help$ help.php
+RewriteRule ^tos$ tos.php
+RewriteRule ^privacy$ privacy.php
+RewriteRule ^contact$ contact.php
+RewriteRule ^myboards$ myboards.php
+RewriteRule ^mypins$ mypins.php
+RewriteRule ^mylikes$ mylikes.php
+RewriteRule ^settings$ settings.php
+RewriteRule ^edit_pin$ edit_pin.php
+RewriteRule ^edit_board$ edit_board.php
+RewriteRule ^edit_pass$ edit_pass.php
+RewriteRule ^delete_create_popup$ delete_create_popup.php
+RewriteRule ^delete_board_popup$ delete_board_popup.php
+RewriteRule ^source/(.*)?$ source.php?q=$1&%{QUERY_STRING}
+RewriteRule ^pin/([^/.]+)?$ pin.php?PID=$1&%{QUERY_STRING}
+RewriteRule ^([^/.]+)/pins?$ profilepins.php?uname=$1&%{QUERY_STRING}
+RewriteRule ^([^/.]+)/likes?$ profilelikes.php?uname=$1&%{QUERY_STRING}
+RewriteRule ^([^/.]+)/followers?$ followersprofile.php?uname=$1&%{QUERY_STRING}
+RewriteRule ^([^/.]+)/following?$ followingprofile.php?uname=$1&%{QUERY_STRING}
+RewriteRule ^([^/.]+)/([^/.]+)/followers?$ followers.php?uname=$1&bname=$2&%{QUERY_STRING}
+RewriteRule ^([^/.]+)/([^/.]+)?$ board.php?uname=$1&bname=$2&%{QUERY_STRING}
+RewriteRule ^([^/.]+)(\/)?$ profile.php?uname=$1
+</IfModule>
+
+<IfModule mod_security.c> 
+   # Turn off mod_security filtering. 
+   SecFilterEngine Off 
+
+   # The below probably isn't needed, 
+   # but better safe than sorry. 
+   SecFilterScanPOST Off 
+</IfModule>

@@ -1,0 +1,33 @@
+/* GENERAL 
+---------------------------------------------- */
+  /* Button Fixes */
+  .Button:hover span,
+  .actions .Button:hover span {border: 1px solid #777777;}
+  .actions .Button11.WhiteButton em {*top: -2px;}
+
+
+/* No box-shadow in IE7 and IE8. These borders simulate the effect. */
+  .header {border-bottom: 2px solid #C9C7C8;left:0px;}
+  .Navigation li ul {*top: 44px;}
+  .CategoriesBar {border-bottom: 2px solid #c9c7c8;left: 0px;}
+  .CategoriesBar li ul {*top: 31px; border-top: 1px solid #adaaaa;}
+  .CategoriesBar .CategoriesDropdown {*top: 33px;}
+  .pin {border-width: 1px 1px 2px; border-style: solid; border-color: #dedcdd #c9c7c8 #c9c7c8;}
+
+  /* Emulate box-shadow */
+  a.close {border-left: 1px solid #C9C7C8;}
+  
+  .Form input[type="text"],.Form input[type="password"],.FancyForm Label {line-height: 1.2em;}
+  
+  /* IE does not support rgba */
+  .ContextBar,
+  .BoardMeta,
+  .sysNextPageLoading,
+  .LoadingPins {border: double #d1cdcd; border-width: 3px 0;}
+  
+*:first-child+html .AboutContent {top: 50px;}
+*:first-child+html .ColumnContainer {top:80px;margin-top: 0px;}
+*:first-child+html .profile {top:90px;margin-top: 0px;}
+*:first-child+html .profile .ColumnContainer {top:0px;}
+*:first-child+html .FixedContainer,*:first-child+html .wrapper {top:80px;position: relative;}
+*:first-child+html .wrapper .ColumnContainer {top:0px;} 
