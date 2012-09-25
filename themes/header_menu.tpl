@@ -2,7 +2,7 @@
     <div class="HeaderContainer">
         <a href="{$baseurl}/" class="Pinme"><img alt="{$site_name}" src="{$imageurl}/redecore_logo.png" /></a>
         <ul class="Navigation">
-        	{if $smarty.session.USERID ne ""}
+        	{if isset($smarty.session.USERID) && $smarty.session.USERID ne ""}
             	<li>
                     <div class="nav sysOutLink"><a href="javascript:void(0)" {literal}onclick="App.ajaxDialog('{/literal}{$baseurl}{literal}/add_popup', {id: 'sysAddPopup', width: '550px'})"{/literal}>{$lang160}</a><span class="PlusIcon"></span></div>
                 </li>

@@ -12,7 +12,7 @@
 	<a class="Button GreenButton Button12" href="#"><strong>Find Friends</strong><span></span></a>
     -->
     <ul class="HeaderCategory HeaderContainer">
-    	{if $smarty.session.USERID ne ""}
+    	{if isset($smarty.session.USERID) && $smarty.session.USERID ne ""}
         <li><a class="nav {if $showfeed eq "1"}selected{/if}" href="{$baseurl}/">{$lang187}</a>&nbsp;·&nbsp;</li>
         {/if}
         <li class="submenu">

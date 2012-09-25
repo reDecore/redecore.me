@@ -2,14 +2,14 @@
 
 class STemplate {
 
-   function STemplate() {
+   public function STemplate() {
         global $Smarty;
         if (!isset($Smarty)) {
             $Smarty = new Smarty;
         }
     }
 
-    function create() {
+    public static function create() {
         global $Smarty;
         $Smarty = new Smarty();
         $Smarty->compile_check = true;
@@ -20,7 +20,7 @@ class STemplate {
         return true;
     }
     
-    function setCompileDir($dir_name) {
+    public static function setCompileDir($dir_name) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -28,7 +28,7 @@ class STemplate {
         $Smarty->compile_dir = $dir_name;
     }
 
-    function setType($type) {
+    public static function setType($type) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -36,7 +36,7 @@ class STemplate {
         $Smarty->type = $type;
     }
 
-    function assign($var, $value) {
+    public static function assign($var, $value) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -44,7 +44,7 @@ class STemplate {
         $Smarty->assign($var, $value);
     }
 
-    function setTplDir($dir_name = null) {
+    public static function setTplDir($dir_name = null) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -56,7 +56,7 @@ class STemplate {
         }
     }
 
-    function setModule($module) {
+    public static function setModule($module) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -65,7 +65,7 @@ class STemplate {
         $Smarty->type  = "module";
     }
 
-    function setTheme($theme) {
+    public static function setTheme($theme) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -76,7 +76,7 @@ class STemplate {
         $Smarty->type         = "theme";
     }
 
-    function getTplDir() {
+    public static function getTplDir() {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -84,7 +84,7 @@ class STemplate {
         return $Smarty->template_dir;
     }
 
-    function display($filename) {
+    public static function display($filename) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -92,7 +92,7 @@ class STemplate {
         $Smarty->display($filename);
     }
 
-    function fetch($filename) {
+    public static function fetch($filename) {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();
@@ -100,7 +100,7 @@ class STemplate {
         return $Smarty->fetch($filename);
     }
     
-    function getVars() {
+    public static function getVars() {
         global $Smarty;
         if (!isset($Smarty)) {
             STemplate::create();

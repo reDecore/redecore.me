@@ -1,17 +1,17 @@
-<?
+<?php
 $config = array();
 
 // Begin Configuration
-$config['basedir']     =  '/home/redecore/public_html';
-$config['baseurl']     =  'http://www.redecore.me';
+$config['basedir']     =  '/www/local.redecore.me';
+$config['baseurl']     =  'http://local.redecore.me';
 
 $DBTYPE = 'mysql';
 $DBHOST = 'localhost';
-$DBUSER = 'redecore_decore';
-$DBPASSWORD = 'startUp1209';
-$DBNAME = 'redecore_redecore';
+$DBUSER = 'root';
+$DBPASSWORD = '';
+$DBNAME = 'redecore';
 
-$default_language = "portuguese"; //Valid options are english, french, spanish, portuguese, japanese, chinese_simplified or chinese_traditional
+$default_language = "english"; //Valid options are english, french, spanish, portuguese, japanese, chinese_simplified or chinese_traditional
 // End Configuration
 
 session_start();
@@ -62,7 +62,7 @@ STemplate::assign($field, strip_mq_gpc($config[$field]));
 @$rsc->MoveNext();
 }}
 
-if ($_REQUEST['language'] != "")
+if (!empty($_REQUEST['language']))
 {
 	if ($_REQUEST['language'] == "english")
 	{
@@ -132,9 +132,11 @@ else
 	include("lang/".$default_language.".php");
 }
 
-for ($i=0; $i<count($lang); $i++)
-{
-	STemplate::assign('lang'.$i, $lang[$i]);
+if (!empty($lang)) {
+  for ($i=0; $i<count($lang); $i++)
+  {
+	  STemplate::assign('lang'.$i, $lang[$i]);
+  }
 }
 
 STemplate::assign('baseurl',       $config['baseurl']);
@@ -150,7 +152,7 @@ STemplate::assign('murl',        $config['murl']);
 STemplate::setCompileDir($config['basedir']."/temporary");
 STemplate::setTplDir($config['basedir']."/themes");
 
-if($sban != "1")
+if(isset($sban) && $sban != "1")
 {
 	$bquery = "SELECT count(*) as total from bans_ips WHERE ip='".mysql_real_escape_string($_SERVER['REMOTE_ADDR'])."'";
 	$bresult = $conn->execute($bquery);

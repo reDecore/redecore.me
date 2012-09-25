@@ -16,8 +16,8 @@ include("include/config.php");
 include("include/functions/import.php");
 $thebaseurl = $config['baseurl'];
 
-$SID = intval(cleanit($_SESSION['USERID']));
-if($SID > 0)
+$SID = (!empty($_SESSION['USERID'])) ? intval(cleanit($_SESSION['USERID'])) : false;
+if(!empty($SID))
 {			
 	$query7 = "select ISFOL from followm WHERE USERID='".mysql_real_escape_string($SID)."'";
 	$results7 = $conn->execute($query7);

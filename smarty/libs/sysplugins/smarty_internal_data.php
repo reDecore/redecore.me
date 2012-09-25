@@ -288,7 +288,7 @@ class Smarty_Internal_Data {
         } else {
         	if ($error_enable) {
 				// force a notice
-				$x = $$_variable;
+				$x = (!empty($$_variable)) ? $$_variable : new Undefined_Smarty_Variable;
         	}
             return new Undefined_Smarty_Variable;
         } 

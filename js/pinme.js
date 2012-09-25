@@ -1,7 +1,7 @@
 (function() {
 	
 	
-	var base_url = 'www.scriptolution.com';
+	var base_url = 'local.redecore.me';
 	var popupUrl = base_url + 'add_pin';
 	
 	
@@ -32,7 +32,7 @@
 		
 		return false;
 	}
-    if (window.location.href.match(/^(http|https):\/\/(www\.scriptolution\.com)/))
+    if (window.location.href.match(/^(http|https):\/\/(local\.redecore\.me)/))
 	{
         alert('The PinMe Button has been successfully installed. You can now pin images from your favorite websites.');
         return false;
