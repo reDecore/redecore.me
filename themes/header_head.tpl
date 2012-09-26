@@ -9,7 +9,7 @@
 {if $pinpage eq "1" AND $pins.pic ne ""}
 <meta property="og:image" content="{$purl}/t/{$pins.pic}"/>
 {else}
-<meta property="og:image" content="{$imageurl}/logo_190x190.jpg"/>
+<meta property="og:image" content="{$imageurl}/redecore_logo.jpg"/>
 {/if}
 <link href="{$baseurl}/js/jquery-ui/style/style.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="{$baseurl}/css/jquery/jcarousel/pin-create-img-picker.css" media="screen" rel="stylesheet" type="text/css" />

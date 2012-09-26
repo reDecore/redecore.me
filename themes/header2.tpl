@@ -6,5 +6,5 @@
 {include file='header_scroll.tpl'}
 <a name="top"></a>
 <div class="header_logo">
-	<div class="HeaderContents"><a href="{$baseurl}/"><img style="display: block; margin: 0 auto;" alt="" src="{$imageurl}/logo.png"></a></div>
+	<div class="HeaderContents"><a href="{$baseurl}/"><img style="display: block; margin: 0 auto;" alt="" src="{$imageurl}/redecore_logo.png"></a></div>
 </div>

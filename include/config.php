@@ -11,11 +11,11 @@ $DBUSER = 'root';
 $DBPASSWORD = '';
 $DBNAME = 'redecore';
 
-$default_language = "english"; //Valid options are english, french, spanish, portuguese, japanese, chinese_simplified or chinese_traditional
+$default_language = "portuguese"; //Valid options are portuguese, english, spanish
 // End Configuration
 
 session_start();
-date_default_timezone_set('America/New_York');
+date_default_timezone_set('America/Sao_Paulo');
 $config['adminurl']      =  $config['baseurl'].'/administrator';
 $config['cssurl']      =  $config['baseurl'].'/css';
 $config['imagedir']      =  $config['basedir'].'/img';
@@ -64,33 +64,17 @@ STemplate::assign($field, strip_mq_gpc($config[$field]));
 
 if (!empty($_REQUEST['language']))
 {
-	if ($_REQUEST['language'] == "english")
+	if ($_REQUEST['language'] == "portuguese")
+	{
+		$_SESSION['language'] = "portuguese";
+	}
+	elseif ($_REQUEST['language'] == "english")
 	{
 		$_SESSION['language'] = "english";
-	}
-	elseif ($_REQUEST['language'] == "french")
-	{
-		$_SESSION['language'] = "french";
 	}
 	elseif ($_REQUEST['language'] == "spanish")
 	{
 		$_SESSION['language'] = "spanish";
-	}
-	elseif ($_REQUEST['language'] == "portuguese")
-	{
-		$_SESSION['language'] = "portuguese";
-	}
-	elseif ($_REQUEST['language'] == "japanese")
-	{
-		$_SESSION['language'] = "japanese";
-	}
-	elseif ($_REQUEST['language'] == "chinese_simplified")
-	{
-		$_SESSION['language'] = "chinese_simplified";
-	}
-	elseif ($_REQUEST['language'] == "chinese_traditional")
-	{
-		$_SESSION['language'] = "chinese_traditional";
 	}
 }
 
@@ -99,33 +83,17 @@ if ($_SESSION['language'] == "")
 	$_SESSION['language'] = $default_language;
 }
 
-if ($_SESSION['language'] == "english")
+if ($_SESSION['language'] == "portuguese")
+{
+include("lang/portuguese.php");
+}
+elseif ($_SESSION['language'] == "english")
 {
 include("lang/english.php");
-}
-elseif ($_SESSION['language'] == "french")
-{
-include("lang/french.php");
 }
 elseif ($_SESSION['language'] == "spanish")
 {
 include("lang/spanish.php");
-}
-elseif ($_SESSION['language'] == "portuguese")
-{
-include("lang/portuguese.php");
-}
-elseif ($_SESSION['language'] == "japanese")
-{
-include("lang/japanese.php");
-}
-elseif ($_SESSION['language'] == "chinese_simplified")
-{
-include("lang/chinese_simplified.php");
-}
-elseif ($_SESSION['language'] == "chinese_traditional")
-{
-include("lang/chinese_traditional.php");
 }
 else
 {
